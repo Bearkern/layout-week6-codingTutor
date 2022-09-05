@@ -49,8 +49,9 @@
   }
 }
 
-.feature {
-  .feature-title {
+.index {
+  .index-title {
+    padding-bottom: 16px;
     &::after {
       content: '';
       position: absolute;
@@ -61,10 +62,62 @@
       background-color: $primary;
       left: 50%;
       transform: translateX(-50%);
-      @include media-breakpoint-up(lg) {
+    }
+    @include media-breakpoint-up(xl) {
+      &-feature::after {
         left: 0;
         transform: inherit;
       }
     }
+  }
+}
+
+.feature {
+  .card {
+    border: 1px solid transparent;
+    background-color: $deep-dark;
+    @include media-breakpoint-up(md) {
+      background-color: $dark;
+    }
+    @include media-breakpoint-up(xl) {
+      .material-icons {
+        color: $white;
+      }
+      opacity: .5;
+      transition: opacity .3s, border-color .3s;
+      &:hover {
+        border-color: $primary;
+        opacity: 1;
+        .material-icons {
+          @include text-gradient;
+        }
+      }
+    }
+  }
+}
+
+.process {
+  .process-order {
+    position: absolute;
+    padding: 0 8px;
+    background-color: $gray-800;
+    top: 0;
+    left: 40px;
+    transform: translateY(-50%);
+  }
+}
+
+.card-img {
+  object-fit: cover;
+}
+
+.recommend-course {
+  .card {
+    &:hover {
+      border-color: $primary !important;
+    }
+  }
+  .course-intro {
+    @include text-ellipsis;
   }
 }

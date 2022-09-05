@@ -4,12 +4,40 @@
   white-space: nowrap;
 }
 
-@mixin bg-gradient($degree: null, $start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
-  background-image: linear-gradient(#{$degree}deg, $start-color $start-percent, $end-color $end-percent);
+@mixin text-ellipsis($line-clamp: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@mixin text-gradient($degree: null, $start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
-  background-image: linear-gradient(#{$degree}deg, $start-color $start-percent, $end-color $end-percent);
+@mixin bg-gradient(
+  $degree: null,
+  $start-color: $primary,
+  $end-color: $secondary,
+  $start-percent: null,
+  $end-percent: null
+) {
+  background-image: linear-gradient(
+    #{$degree}deg,
+    $start-color $start-percent,
+    $end-color $end-percent
+  );
+}
+
+@mixin text-gradient(
+  $degree: null,
+  $start-color: $primary,
+  $end-color: $secondary,
+  $start-percent: null,
+  $end-percent: null
+) {
+  background-image: linear-gradient(
+    #{$degree}deg,
+    $start-color $start-percent,
+    $end-color $end-percent
+  );
   background-clip: text;
   color: transparent;
 }

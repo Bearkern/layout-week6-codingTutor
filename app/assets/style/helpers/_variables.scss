@@ -73,7 +73,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         $gray-300; // $gray-100 !default;
 $dark:          $gray-600; // $gray-900 !default;
 // scss-docs-end theme-color-variables
 $deep-dark:     $gray-700;
@@ -87,6 +87,8 @@ $theme-colors: (
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
+  "white":      $white,
+  "black":      $black,
   "light":      $light,
   "dark":       $dark,
   "deep-dark":  $deep-dark,
@@ -241,7 +243,7 @@ $variable-prefix:             bs- !default;
 // The gradient which is added to components if `$enable-gradients` is `true`
 // This gradient is also added to elements with `.bg-gradient`
 // scss-docs-start variable-gradient
-$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
+$gradient: linear-gradient(104deg, $secondary, $primary); // linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-end variable-gradient
 
 // Spacing
@@ -262,12 +264,15 @@ $spacers: (
   4: ($spacer-base * 4) / $base * $spacer, // $spacer * 1.5,
   5: ($spacer-base * 5) / $base * $spacer, // $spacer * 3,
   6: ($spacer-base * 6) / $base * $spacer, 
+  6\.5: ($spacer-base * 6.5) / $base * $spacer, 
   7: ($spacer-base * 7) / $base * $spacer,
   8: ($spacer-base * 8) / $base * $spacer,
+  9: ($spacer-base * 9) / $base * $spacer,
   10: ($spacer-base * 10) / $base * $spacer,
   10\.5: ($spacer-base * 10.5) / $base * $spacer,
   11\.5: ($spacer-base * 11.5) / $base * $spacer,
   12: ($spacer-base * 12) / $base * $spacer,
+  12\.5: ($spacer-base * 12.5) / $base * $spacer,
   16: ($spacer-base * 16) / $base * $spacer,
   18: ($spacer-base * 18) / $base * $spacer,
   19: ($spacer-base * 19) / $base * $spacer,
@@ -458,6 +463,7 @@ $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
 $line-height-sm:              1.16667; // 1.25 !default;
+$line-height-md:              1.42857; // 1.25 !default;
 $line-height-lg:              1.45833; // 2 !default;
 
 $h1-font-size:                (48 / $font-size-spacer) * $font-size-base; // $font-size-base * 2.5 !default;
@@ -639,8 +645,8 @@ $input-btn-border-width:      $border-width !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-y:               .5rem; // $input-btn-padding-y !default;
+$btn-padding-x:               3rem; // $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
@@ -668,7 +674,7 @@ $btn-link-hover-color:        $link-hover-color !default;
 $btn-link-disabled-color:     $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
+$btn-border-radius:           .5rem; // $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
@@ -1112,7 +1118,7 @@ $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
-$card-border-radius:                $border-radius !default;
+$card-border-radius:                $border-radius-lg;// $border-radius !default;
 $card-border-color:                 rgba($black, .125) !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
@@ -1121,7 +1127,7 @@ $card-cap-bg:                       rgba($black, .03) !default;
 $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
-$card-bg:                           $white !default;
+$card-bg:                           $dark; // $white !default;
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
 // scss-docs-end card-variables
