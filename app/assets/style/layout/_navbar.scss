@@ -1,0 +1,39 @@
+h1 a {
+  background: url(../images/logo2.svg) no-repeat center / contain;
+  height: 24px;
+  width: 24px;
+  @include hide-text;
+  @include media-breakpoint-up(md) {
+    height: 42px;
+    width: 42px;
+  }
+  @include media-breakpoint-up(lg) {
+    background: url(../images/logo.svg) no-repeat center / contain;
+    height: 42px;
+    width: 175px;
+  }
+}
+
+.navbar {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 74px;
+    height: 2px;
+    width: 100%;
+    @include bg-gradient(90, $primary 50%, $secondary 50%);
+    @include media-breakpoint-up(md) {
+      top: 90px;
+    }
+  }
+  .navbar-collapse {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: $dark;
+    @include media-breakpoint-up(lg) {
+      position: initial;
+    }
+  }
+}

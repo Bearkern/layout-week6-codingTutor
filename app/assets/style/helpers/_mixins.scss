@@ -1,0 +1,15 @@
+@mixin hide-text {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin bg-gradient($degree: null, $start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(#{$degree}deg, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin text-gradient($degree: null, $start-color: $primary, $end-color: $secondary, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(#{$degree}deg, $start-color $start-percent, $end-color $end-percent);
+  background-clip: text;
+  color: transparent;
+}

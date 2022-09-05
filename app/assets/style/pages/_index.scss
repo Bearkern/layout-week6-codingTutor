@@ -1,0 +1,70 @@
+.header {
+  background: url(../images/bg_home_mobile.jpg) no-repeat center / cover;
+  width: 100%;
+  padding: 85px 0;
+  @include media-breakpoint-up(md) {
+    background: url(../images/bg_home.jpg) no-repeat center / cover;
+    padding: 210px 0;
+  }
+}
+
+.header-text {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: $white;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+  }
+  > :first-child {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background-color: $white;
+    }
+    &::before {
+      left: 0;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+    }
+    &::after {
+      right: 0;
+      bottom: 0;
+      transform: translate(50%, 50%);
+    }
+  }
+}
+
+.feature {
+  .feature-title {
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      margin-top: 16px;
+      height: 3px;
+      width: 50px;
+      background-color: $primary;
+      left: 50%;
+      transform: translateX(-50%);
+      @include media-breakpoint-up(lg) {
+        left: 0;
+        transform: inherit;
+      }
+    }
+  }
+}
