@@ -1,113 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Boostrap Index</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/style/all.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Home | Index</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Noto+Sans+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container">
+        <h1>
+          <a class="d-block" href="./index.html">Coding Home</a>
+        </h1>
+        <button
+          class="navbar-toggler btn p-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleContent"
+          aria-controls="navbarToggleContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="material-icons align-text-bottom text-primary"> drag_handle </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarToggleContent">
+          <ul class="navbar-nav text-center gap-2 gap-lg-12 py-4 py-lg-0 ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link fs-7 active" aria-current="page" href="./index.html">首頁</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link fs-7" href="./course.html">課程介紹</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+            <li class="nav-item">
+              <a class="nav-link fs-7" href="./login.html">
+                <span class="material-icons align-text-bottom me-1"> account_circle </span>登入
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
 
     
-<div class="container">
-  <h1 class="index__h1">這是一段話</h1>
-  <div class="alert alert-primary" role="alert">
-    A simple primary alert—check it out!
-  </div>
-  <div class="alert alert-secondary" role="alert">
-    A simple secondary alert—check it out!
-  </div>
-  <div class="alert alert-success" role="alert">
-    A simple success alert—check it out!
-  </div>
-  <div class="alert alert-danger" role="alert">
-    A simple danger alert—check it out!
-  </div>
-  <div class="alert alert-warning" role="alert">
-    A simple warning alert—check it out!
-  </div>
-  <div class="alert alert-info" role="alert">
-    A simple info alert—check it out!
-  </div>
-  <div class="alert alert-light" role="alert">
-    A simple light alert—check it out!
-  </div>
-  <div class="alert alert-dark" role="alert">
-    A simple dark alert—check it out!
-  </div>
-</div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+<header class="header container">
+  <div class="container">
+    <div class="row m-0">
+      <div
+        class="header-text col-lg-6 py-8 py-md-11.5 text-center position-relative border mx-auto"
+      >
+        <h2 class="fs-4 fs-md-2 fs-lg-1 lh-base lh-md-lg mb-6">
+          <span class="text-gradient d-block">全台最豐富的程式家教</span>
+          在實踐中化理想為現實
+        </h2>
+        <p class="fs-md-7">全台最專業師資｜到府程式家教｜客製化課程</p>
       </div>
     </div>
   </div>
-</div>
+</header>
 
+<main>
+  <section class="feature bg-dark">
+    <div class="container">
+      <ul class="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-4 align-items-center justify-content-center mx-0">
+        <li class="col text-center text-md-left mb-6 mb-md-0">
+          <h2 class="feature-title fs-4 position-relative text-lg-start mb-4">
+            手把手帶你<br />親自到家教到會
+          </h2>
+        </li>
+        <li class="col py-12 text-center border border-transparent rounded-2 bg-deep-dark mb-6 mb-lg-0">
+          <span class="material-icons fs-lg text-gradient mb-6"> code </span>
+          <h3 class="fs-7 mb-4">超過 100 種專業課程</h3>
+          <p class="fs-7">
+            學習標準化的電腦形式語言<br />
+            培養運算思維和邏輯素養
+          </p>
+        </li>
+        <li class="col py-12 text-center border border-transparent rounded-2 bg-deep-dark mb-6 mb-md-0">
+          <span class="material-icons fs-lg text-gradient mb-6"> rocket_launch </span>
+          <h3 class="fs-7 mb-4">高效學習</h3>
+          <p class="fs-7">客製化專屬課表<br>讓學習變簡單</p>
+        </li>
+        <li class="col py-12 text-center border border-transparent rounded-2 bg-deep-dark">
+          <span class="material-icons fs-lg text-gradient mb-6"> fmd_good </span>
+          <h3 class="fs-7 mb-4">指定地點</h3>
+          <p class="fs-7">專業老師到你指定的地點<br />一對一高效學習</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
 
-    <footer class="footer">
-      footer
+    
+    <footer class="footer text-center">
+      <p class="copyright font-monospace lh-sm p-4 p-md-6">Coding Home © 2022 All Rights Reserved</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
-
 </html>
