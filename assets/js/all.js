@@ -1,6 +1,6 @@
 "use strict";
 
-var swiper = new Swiper(".programming-language", {
+var swiperProgramming = new Swiper(".programming-language", {
   slidesPerView: "auto",
   spaceBetween: 8,
   // autoplay: {
@@ -11,6 +11,17 @@ var swiper = new Swiper(".programming-language", {
     992: {
       spaceBetween: 16
     }
+  }
+});
+var swiperFeedback = new Swiper(".feedback-content", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".feedback-btn-next",
+    prevEl: ".feedback-btn-prev"
+  },
+  pagination: {
+    el: ".feedback-pagination",
+    clickable: true
   }
 }); // $(function() {
 //   const elem = document.querySelector('input[name="formDate"]');
