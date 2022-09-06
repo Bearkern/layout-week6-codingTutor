@@ -15,7 +15,7 @@
 @mixin bg-gradient(
   $degree: null,
   $start-color: $primary,
-  $end-color: $secondary,
+  $end-color: $cyan,
   $start-percent: null,
   $end-percent: null
 ) {
@@ -29,7 +29,7 @@
 @mixin text-gradient(
   $degree: null,
   $start-color: $primary,
-  $end-color: $secondary,
+  $end-color: $cyan,
   $start-percent: null,
   $end-percent: null
 ) {

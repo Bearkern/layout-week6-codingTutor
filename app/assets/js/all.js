@@ -1,4 +1,4 @@
-const swiper = new Swiper(".programming-language", {
+const swiperProgramming = new Swiper(".programming-language", {
   slidesPerView: "auto",
   spaceBetween: 8,
   // autoplay: {
@@ -10,6 +10,18 @@ const swiper = new Swiper(".programming-language", {
       spaceBetween: 16,
     }
   }
+});
+
+const swiperFeedback = new Swiper(".feedback-content", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".feedback-btn-next",
+    prevEl: ".feedback-btn-prev",
+  },
+  pagination: {
+    el: ".feedback-pagination",
+    clickable: true,
+  },
 });
 
 // $(function() {

@@ -50,7 +50,8 @@
 }
 
 .index {
-  .index-title {
+  &-title {
+    position: relative;
     padding-bottom: 16px;
     &::after {
       content: '';
@@ -68,6 +69,11 @@
         left: 0;
         transform: inherit;
       }
+      &-advantage::after {
+        left: 0;
+        transform: inherit;
+        background-color: $white;
+      }
     }
   }
 }
@@ -83,8 +89,8 @@
       .material-icons {
         color: $white;
       }
-      opacity: .5;
-      transition: opacity .3s, border-color .3s;
+      opacity: 0.5;
+      transition: opacity 0.3s, border-color 0.3s;
       &:hover {
         border-color: $primary;
         opacity: 1;
@@ -97,7 +103,7 @@
 }
 
 .process {
-  .process-order {
+  &-order {
     position: absolute;
     padding: 0 8px;
     background-color: $gray-800;
@@ -119,5 +125,163 @@
   }
   .course-intro {
     @include text-ellipsis;
+  }
+}
+
+.advantage {
+  .card {
+    .material-icons {
+      color: $primary;
+    }
+    &-img {
+      height: 265px;
+      opacity: 0.1;
+      transition: opacity 0.3s;
+      @include media-breakpoint-up(md) {
+        height: 350px;
+      }
+      @include media-breakpoint-up(xl) {
+        height: 615px;
+      }
+    }
+    &-text {
+      opacity: 0.8;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .card {
+      .material-icons {
+        color: $white;
+        opacity: 0.5;
+      }
+      &-text {
+        opacity: 0.5;
+      }
+      &:hover {
+        .card-img {
+          opacity: 0.8;
+        }
+        .material-icons {
+          color: $primary;
+          opacity: 1;
+        }
+        .index-title-advantage::after {
+          background-color: $primary;
+        }
+        .card-text {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.article {
+  .card:hover {
+    @include media-breakpoint-up(lg) {
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border: solid $primary;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        border-width: 1px 0 0 1px;
+        border-top-left-radius: 12px;
+      }
+      &::after {
+        top: 0;
+        right: 0;
+        border-width: 1px 1px 0 0;
+        border-top-right-radius: 12px;
+      }
+      h3 {
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          border: solid $primary;
+        }
+        &::before {
+          bottom: 0;
+          left: 0;
+          border-width: 0 0 1px 1px;
+          border-bottom-left-radius: 12px;
+        }
+        &::after {
+          bottom: 0;
+          right: 0;
+          border-width: 0 1px 1px 0;
+          border-bottom-right-radius: 12px;
+        }
+      }
+    }
+  }
+}
+
+.feedback {
+  .container {
+    background: url(../images/bg_share.jpg) no-repeat center / cover;
+  }
+  &-img {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -10px;
+      width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
+      border: 1px solid $gray-400;
+      z-index: -1;
+    }
+  }
+  .card {
+    position: relative;
+    border-bottom-left-radius: 0;
+    &-img {
+      position: absolute;
+      top: 0;
+      right: 24px;
+      transform: translateY(-50%);
+      height: 80px;
+      width: 80px;
+    }
+    @include media-breakpoint-up(lg) {
+      &-img {
+        right: 32px;
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+  &-swiper-buttons {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+  .swiper {
+    --swiper-pagination-bullet-horizontal-gap: 0;
+    &-pagination {
+      &-bullet {
+        opacity: initial;
+        background-color: $primary;
+        &-active {
+          border-radius: 100px;
+          width: 16px;
+        }
+      }
+      &-horizontal {
+        width: auto;
+      }
+    }
   }
 }
