@@ -93,6 +93,7 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
   "deep-dark":  $deep-dark,
+  "gray-dark":  $gray-dark,
   "transparent":  $transparent,
 ) !default;
 // scss-docs-end theme-colors-map
@@ -276,10 +277,13 @@ $spacers: (
   12: ($spacer-base * 12) / $base * $spacer,
   12\.5: ($spacer-base * 12.5) / $base * $spacer,
   16: ($spacer-base * 16) / $base * $spacer,
+  16\.25: ($spacer-base * 16.52) / $base * $spacer,
   18: ($spacer-base * 18) / $base * $spacer,
+  18\.5: ($spacer-base * 18.5) / $base * $spacer,
   19: ($spacer-base * 19) / $base * $spacer,
   20: ($spacer-base * 20) / $base * $spacer,
   24: ($spacer-base * 24) / $base * $spacer,
+  32\.5: ($spacer-base * 32.5) / $base * $spacer,
   40: ($spacer-base * 40) / $base * $spacer,
 ) !default;
 

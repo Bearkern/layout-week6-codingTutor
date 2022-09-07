@@ -28,8 +28,9 @@ h1 a {
   }
   .navbar-collapse {
     position: absolute;
+    z-index: 1;
     left: 0;
-    top: 100%;
+    top: 76px;
     width: 100%;
     background-color: $dark;
     @include media-breakpoint-up(lg) {
