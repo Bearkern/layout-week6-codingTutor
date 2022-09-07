@@ -8,7 +8,11 @@
 
 @import "./base/base";
 
+@import "./modules/datepicker";
+@import "./modules/payment-progress";
+
 @import './layout/navbar.scss';
 @import './layout/footer.scss';
 
 @import './pages/index.scss';
+@import './pages/enroll.scss';

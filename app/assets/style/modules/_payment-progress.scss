@@ -1,0 +1,76 @@
+.payment-progress {
+  @include media-breakpoint-up(lg) {
+    background: $gray-dark;
+  }
+}
+
+.progress-item {
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    display: block;
+    height: 2px;
+    width: 50%;
+    background-color: $light;
+    z-index: 0;
+  }
+  &:first-child {
+    &::before {
+      display: none;
+    }
+  }
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+  .item {
+    &-order {
+      background-color: $dark;
+      position: relative;
+      z-index: 1;
+      border: 1px solid;
+    }
+    &-number {
+      width: 20px;
+    }
+  }
+  &.completed {
+    .item {
+      &-order {
+        background-color: $primary;
+        border-color: $primary;
+      }
+      &-name {
+        color: $primary;
+      }
+    }
+    &::before,
+    &::after {
+      background-color: $primary;
+    }
+  }
+  &.process {
+    .item {
+      &-order {
+        background-color: $primary;
+        border-color: $primary;
+      }
+      &-name {
+        color: $primary;
+      }
+    }
+    &::before {
+      background-color: $primary;
+    }
+  }
+}

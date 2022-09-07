@@ -78,6 +78,7 @@ $light:         $gray-200; // $gray-100 !default;
 $dark:          $gray-600; // $gray-900 !default;
 // scss-docs-end theme-color-variables
 $deep-dark:     $gray-700;
+$gray-dark:     $gray-800;
 $transparent:   transparent;
 
 // scss-docs-start theme-colors-map
@@ -261,6 +262,7 @@ $spacer-base: 4;
 $spacers: (
   0: 0,
   1: ($spacer-base * 1) / $base * $spacer, // $spacer * .25,
+  1\.5: ($spacer-base * 1.5) / $base * $spacer,
   2: ($spacer-base * 2) / $base * $spacer, // $spacer * .5,
   3: ($spacer-base * 3) / $base * $spacer, // $spacer,
   4: ($spacer-base * 4) / $base * $spacer, // $spacer * 1.5,
@@ -273,6 +275,7 @@ $spacers: (
   9: ($spacer-base * 9) / $base * $spacer,
   10: ($spacer-base * 10) / $base * $spacer,
   10\.5: ($spacer-base * 10.5) / $base * $spacer,
+  11: ($spacer-base * 11) / $base * $spacer,
   11\.5: ($spacer-base * 11.5) / $base * $spacer,
   12: ($spacer-base * 12) / $base * $spacer,
   12\.5: ($spacer-base * 12.5) / $base * $spacer,
@@ -283,6 +286,7 @@ $spacers: (
   19: ($spacer-base * 19) / $base * $spacer,
   20: ($spacer-base * 20) / $base * $spacer,
   24: ($spacer-base * 24) / $base * $spacer,
+  28\.5: ($spacer-base * 28.5) / $base * $spacer,
   32\.5: ($spacer-base * 32.5) / $base * $spacer,
   40: ($spacer-base * 40) / $base * $spacer,
 ) !default;
@@ -488,6 +492,7 @@ $lg: (50 / $font-size-spacer) * $font-size-base;
 // scss-docs-start font-sizes
 $font-sizes: (
   lg: $lg,
+  base: $font-size-base,
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,
@@ -516,7 +521,7 @@ $display-font-sizes: (
   3: 4rem,
   4: 3.5rem,
   5: 3rem,
-  6: 2.5rem
+  6: 2.625rem //2.5rem
 ) !default;
 
 $display-font-weight: 300 !default;
@@ -663,9 +668,9 @@ $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
 $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
 $btn-font-size-sm:            $input-btn-font-size-sm !default;
 
-$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
-$btn-font-size-lg:            $input-btn-font-size-lg !default;
+$btn-padding-y-lg:            1rem; // $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            1rem; // $input-btn-padding-x-lg !default;
+$btn-font-size-lg:            1rem; // $input-btn-font-size-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
@@ -683,7 +688,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           .5rem; // $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
-$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius-lg:        .5rem; // $border-radius-lg !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
@@ -713,7 +718,7 @@ $form-label-margin-bottom:              .5rem !default;
 $form-label-font-size:                  null !default;
 $form-label-font-style:                 null !default;
 $form-label-font-weight:                null !default;
-$form-label-color:                      null !default;
+$form-label-color:                      $light; // null !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
@@ -732,7 +737,7 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              $white !default;
+$input-bg:                              $gray-dark; // $white !default;
 $input-disabled-bg:                     $gray-200 !default;
 $input-disabled-border-color:           null !default;
 
@@ -751,7 +756,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               $gray-600 !default;
+$input-placeholder-color:               $light; // $gray-600 !default;
 $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
@@ -843,7 +848,7 @@ $form-select-disabled-bg:           $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position:           right $form-select-padding-x center !default;
 $form-select-bg-size:               16px 12px !default; // In pixels because image dimensions
-$form-select-indicator-color:       $gray-800 !default;
+$form-select-indicator-color:       $white; // $gray-800 !default;
 $form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;
@@ -1121,8 +1126,8 @@ $pagination-border-radius-lg:       $border-radius-lg !default;
 // Cards
 
 // scss-docs-start card-variables
-$card-spacer-y:                     $spacer !default;
-$card-spacer-x:                     $spacer !default;
+$card-spacer-y:                     0; // $spacer !default;
+$card-spacer-x:                     0; // $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius-lg;// $border-radius !default;

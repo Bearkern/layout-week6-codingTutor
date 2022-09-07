@@ -1,0 +1,25 @@
+.datepicker {
+  color: $gray-dark;
+}
+
+.datepicker-cell:not(.disabled):hover {
+  background-color: $primary;
+}
+
+.datepicker-cell.selected,
+.datepicker-cell.selected:hover {
+  background-color: $primary;
+  color: $gray-dark;
+}
+
+.datepicker-controls {
+  .btn {
+    color: $gray-dark;
+  }
+}
+
+.datepicker-cell {
+  &.next, &.prev {
+    color: $light;
+  }
+}

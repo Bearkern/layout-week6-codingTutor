@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%- title %></title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
 
-  <body>
+  <body class="<%- current %>-page d-flex flex-column">
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
       <div class="container">
         <h1>
@@ -43,7 +43,7 @@
               <a class="nav-link fs-7 active" aria-current="page" href="./index.html">首頁</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-7" href="./course.html">課程介紹</a>
+              <a class="nav-link fs-7" href="./courses.html">課程介紹</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-7" href="./login.html">
@@ -57,8 +57,8 @@
 
     <%- contents %>
 
-    <footer class="footer text-center">
-      <p class="copyright font-monospace lh-sm p-4 p-md-6">
+    <footer class="footer text-center mt-auto">
+      <p class="copyright font-monospace fs-9 lh-sm fs-md-base p-4 p-md-6">
         Coding Home © 2022 All Rights Reserved
       </p>
     </footer>

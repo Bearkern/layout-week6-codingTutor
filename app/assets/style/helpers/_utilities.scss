@@ -605,3 +605,7 @@ $utilities: map-merge(
   background-clip: text;
   color: transparent;
 }
+
+.card-img {
+  object-fit: cover;
+}

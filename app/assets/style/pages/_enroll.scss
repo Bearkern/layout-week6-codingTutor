@@ -1,0 +1,43 @@
+.enroll-course {
+  .card {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      height: 0;
+      width: 0;
+      border-style: solid;
+      border-width: 12px 12px 0 12px;
+      border-color: $dark transparent transparent transparent;
+      transform: translate(-50%, 0);
+      @include media-breakpoint-up(lg) {
+        top: 50%;
+        left: 100%;
+        border-width: 12px 0 12px 12px;
+        border-color: transparent transparent transparent $dark;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  .payment-methods {
+    .payment-method {
+      flex-basis: calc(50% - 4px);
+      @include media-breakpoint-up(md) {
+        flex-basis: initial;
+      }
+      > {
+        .active {
+          color: $primary;
+          background-color: $gray-dark;
+          border: 1px solid $primary;
+        }
+        :hover {
+          color: $primary;
+          border: 1px solid $primary;
+          background-color: $dark;
+        }
+      }
+    }
+  }
+}
