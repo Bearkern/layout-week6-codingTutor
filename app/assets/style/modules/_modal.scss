@@ -1,0 +1,38 @@
+.other-login-title {
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 35%;
+    background-color: $light;
+  }
+  &::before {
+    top: 50%;
+    left: 0;
+  }
+  &::after {
+    top: 50%;
+    right: 0;
+  }
+}
+.modal-footer {
+  justify-content: initial !important;
+  align-items: initial !important;
+}
+@include media-breakpoint-up(lg) {
+  .btn-close-costomize {
+    position: absolute;
+    top: 30px;
+    right: 24px;
+  }
+  .modal-dialog {
+    max-width: 636px;
+  }
+  .modal-content > *:not(.modal-header) {
+    max-width: 331px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
