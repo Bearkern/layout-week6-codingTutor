@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Home | Index</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,10 +48,15 @@
             <li class="nav-item">
               <a class="nav-link fs-7" href="./courses.html">課程介紹</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fs-7" href="./login.html">
+            <li class="nav-item mx-auto">
+              <button
+                type="button"
+                class="btn nav-link fs-7"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
                 <span class="material-icons align-text-bottom me-1"> account_circle </span>登入
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -560,6 +568,64 @@
         Coding Home © 2022 All Rights Reserved
       </p>
     </footer>
+
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content pt-4 pt-lg-6 px-6 pb-10 pb-lg-12">
+          <div class="modal-header flex-wrap mb-6 mb-lg-8">
+            <button
+              type="button"
+              class="btn p-0 border-0 w-100 w-lg-auto text-end btn-close-costomize"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span class="d-block material-icons-outlined"> close </span>
+            </button>
+            <h2 class="modal-title fs-4 w-100 text-center" id="loginModalLabel">登入</h2>
+          </div>
+          <form action="./enroll.html" class="modal-body">
+            <div class="mb-4 mb-lg-6">
+              <label for="email" class="form-label">信箱</label>
+              <input type="email" id="email" placeholder="請輸入信箱" class="form-control" />
+            </div>
+            <div class="mb-4 mb-lg-6">
+              <label for="tel" class="form-label">密碼</label>
+              <input type="tel" id="tel" placeholder="請輸入密碼" class="form-control" />
+            </div>
+            <button type="submit" class="btn bg-gradient w-100 fs-7 border-0 mb-6 mb-lg-12">
+              登入
+            </button>
+          </form>
+          <div class="modal-footer flex-column">
+            <p class="other-login-title text-light text-center mb-4">其他登入方式</p>
+            <button type="button" class="btn btn-outline-white mb-4 mb-lg-6">
+              <img
+                src="./assets/images/icon_fb.svg"
+                alt="facebook logo"
+                height="24"
+                width="24"
+                class="me-8"
+              />Facebook 登入
+            </button>
+            <button type="button" class="btn btn-outline-white">
+              <img
+                src="./assets/images/icon_google.svg"
+                alt="google logo"
+                height="24"
+                width="24"
+                class="me-8"
+              />Google 登入
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
